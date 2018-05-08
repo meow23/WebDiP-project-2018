@@ -1,0 +1,52 @@
+body{
+    margin: 0px;
+    font-family: 'IBM Plex Sans', sans-serif;
+
+}
+header{
+    margin: 0px;
+}
+
+
+.casssiopeia-logo{
+    object-fit: cover;
+    width: 500px;
+    height: 150px;
+    padding: 10px;
+    background-image: url(/images/Cas-logo.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    margin: auto;
+    margin-top: 10px;
+}
+
+.title-row{
+    padding: 0px;
+    border: none;
+}
+
+.navigation-bar{
+    background: #e8eaed;
+    margin-top: 10px;
+    padding: 10px;
+    padding-left: 30px;
+    padding-right: 30px;
+    font-size: 20px;
+    font-weight: 400;
+}
+
+nav a {
+    color: #000000;
+    text-decoration: none;
+    padding: 0 20px;
+}
+
+nav a:hover {
+    color: #788599;
+    transition: 0.3s;
+}
+
+nav a.active {
+    color: #64addd;
+}

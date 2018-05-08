@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="WebServers">
+    <option name="servers">
+      <webServer id="fa95e686-45a5-4cb8-9e02-d596bd234f3b" name="Barka" url="http://barka.foi.hr/WebDiP/2017/zadaca_05/miasimuni">
+        <fileTransfer host="barka.foi.hr" port="22" rootFolder="/var/www/WebDiP/2017/zadaca_05/miasimuni" accessType="SFTP">
+          <advancedOptions>
+            <advancedOptions dataProtectionLevel="Private" />
+          </advancedOptions>
+          <option name="port" value="22" />
+        </fileTransfer>
+      </webServer>
+    </option>
+  </component>
+</project>
