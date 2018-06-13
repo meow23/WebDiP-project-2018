@@ -27,27 +27,27 @@
     <section id="registration">
         <div class="label-form">
             <label>Ime</label>
-            <input type="text" maxlength="20" name="name-reg">
+            <input id="name" type="text" maxlength="20" name="name-reg">
         </div>
         <div class="label-form">
             <label>Prezime</label>
-            <input type="text" maxlength="20" name="surname-reg">
+            <input id="surname" type="text" maxlength="20" name="surname-reg">
         </div>
         <div class="label-form">
             <label>Korisničko ime</label>
-            <input type="text" maxlength="20" name="username-reg">
+            <input id="username" type="text" maxlength="20" name="username-reg">
         </div>
         <div class="label-form">
             <label>Lozinka</label>
-            <input type="text" maxlength="20" name="password-reg">
+            <input id="pass" type="password" maxlength="20" name="password-reg">
         </div>
         <div class="label-form">
             <label>Ponovi lozinku</label>
-            <input type="text" maxlength="20" name="password-valid">
+            <input id="pass-valid" type="password" maxlength="20" name="password-valid">
         </div>
         <div class="label-form">
             <label>e-mail</label>
-            <input type="email" maxlength="20" name="email-reg">
+            <input id="email" type="email" maxlength="20" name="email-reg">
         </div>
         <button id="registration-button" name = "btnRegistration" value="regSubmit" type="sumbit" action="../database/insertNewUser.php">Registracija</button>
     </section>

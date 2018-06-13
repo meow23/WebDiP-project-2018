@@ -1,5 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AnalysisUIOptions">
+    <option name="SCOPE_TYPE" value="3" />
+  </component>
   <component name="ChangeListManager">
     <list default="true" id="b6bdd6f0-3457-47d9-9e46-78d8183c713a" name="Default" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -34,7 +37,7 @@
           <file leaf-file-name="database.class.php" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/database/database.class.php">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="135">
+                <state relative-caret-position="572">
                   <caret line="26" column="14" selection-start-line="26" selection-start-column="14" selection-end-line="26" selection-end-column="14" />
                 </state>
               </provider>
@@ -43,8 +46,8 @@
           <file leaf-file-name="header.php" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/templates/header.php">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="237">
-                  <caret line="13" column="74" selection-start-line="13" selection-start-column="74" selection-end-line="13" selection-end-column="74" />
+                <state relative-caret-position="374">
+                  <caret line="17" column="7" lean-forward="true" selection-start-line="17" selection-start-column="7" selection-end-line="17" selection-end-column="7" />
                 </state>
               </provider>
             </entry>
@@ -52,8 +55,17 @@
           <file leaf-file-name="prijavaRegistracija.php" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/prijavaRegistracija.php">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="1210">
-                  <caret line="55" column="5" selection-start-line="55" selection-start-column="5" selection-end-line="55" selection-end-column="5" />
+                <state relative-caret-position="295">
+                  <caret line="37" column="31" selection-start-line="37" selection-start-column="31" selection-end-line="37" selection-end-column="31" />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="miasimuni.css" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/css/miasimuni.css">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="353">
+                  <caret line="91" selection-start-line="91" selection-end-line="91" />
                 </state>
               </provider>
             </entry>
@@ -61,21 +73,26 @@
         </leaf>
       </split-first>
       <split-second>
-        <leaf>
+        <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
           <file leaf-file-name="miasimuni.js" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/JavaScript/miasimuni.js">
+              <provider selected="true" editor-type-id="text-editor" />
+            </entry>
+          </file>
+          <file leaf-file-name="insertNewUser.php" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/database/insertNewUser.php">
               <provider selected="true" editor-type-id="text-editor">
-                <state>
-                  <caret lean-forward="true" />
+                <state relative-caret-position="506">
+                  <caret line="23" lean-forward="true" selection-start-line="23" selection-end-line="23" />
                 </state>
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="insertNewUser.php" pinned="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/database/insertNewUser.php">
+          <file leaf-file-name="jquery.js" pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/JavaScript/jquery.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="44">
-                  <caret line="2" lean-forward="true" selection-start-line="2" selection-end-line="2" />
+                <state relative-caret-position="176">
+                  <caret line="8" column="34" selection-start-line="8" selection-start-column="34" selection-end-line="8" selection-end-column="34" />
                 </state>
               </provider>
             </entry>
@@ -99,22 +116,29 @@
         <option value="$PROJECT_DIR$/index.html" />
         <option value="$PROJECT_DIR$/templates/header.tpl" />
         <option value="$PROJECT_DIR$/templates/footer.php" />
-        <option value="$PROJECT_DIR$/css/miasimuni.css" />
         <option value="$PROJECT_DIR$/database/database_connection.php" />
         <option value="$PROJECT_DIR$/index.php" />
         <option value="$PROJECT_DIR$/database/database.class.php" />
         <option value="$PROJECT_DIR$/JSON/miasimuni.js" />
         <option value="$PROJECT_DIR$/JavaScript/insertData.php" />
         <option value="$PROJECT_DIR$/database/insertData.php" />
+        <option value="$PROJECT_DIR$/css/miasimuni.css" />
         <option value="$PROJECT_DIR$/templates/header.php" />
-        <option value="$PROJECT_DIR$/prijavaRegistracija.php" />
         <option value="$PROJECT_DIR$/JavaScript/miasimuni.js" />
         <option value="$PROJECT_DIR$/database/insertNewUser.php" />
+        <option value="$PROJECT_DIR$/prijavaRegistracija.php" />
+        <option value="$PROJECT_DIR$/JavaScript/jquery.js" />
       </list>
     </option>
   </component>
   <component name="JsBuildToolGruntFileManager" detection-done="true" sorting="DEFINITION_ORDER" />
   <component name="JsBuildToolPackageJson" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsFlowSettings">
+    <service-enabled>true</service-enabled>
+    <exe-path />
+    <other-services-enabled>true</other-services-enabled>
+    <auto-save>true</auto-save>
+  </component>
   <component name="JsGulpfileManager">
     <detection-done>true</detection-done>
     <sorting>DEFINITION_ORDER</sorting>
@@ -139,6 +163,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -175,11 +200,11 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
+    <property name="JavaScriptWeakerCompletionTypeGuess" value="true" />
     <property name="WebServerToolWindowFactoryState" value="true" />
     <property name="WebServerToolWindowPanel.toolwindow.highlight.mappings" value="true" />
     <property name="WebServerToolWindowPanel.toolwindow.highlight.symlinks" value="true" />
@@ -188,7 +213,7 @@
     <property name="WebServerToolWindowPanel.toolwindow.show.size" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../../php/php.exe" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
-    <property name="settings.editor.selected.configurable" value="Errors" />
+    <property name="settings.editor.selected.configurable" value="settings.json.schema" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
@@ -244,26 +269,30 @@
       <workItem from="1528731391499" duration="2354000" />
       <workItem from="1528736169135" duration="2282000" />
       <workItem from="1528832735190" duration="26104000" />
+      <workItem from="1528918381751" duration="6799000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="42191000" />
+    <option name="totallyTimeSpent" value="48990000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1066" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" />
       <window_info anchor="bottom" id="Database Changes" order="7" show_stripe_button="false" />
-      <window_info anchor="bottom" id="File Transfer" order="7" visible="true" weight="0.09884332" />
+      <window_info anchor="bottom" id="File Transfer" order="7" weight="0.09884332" />
       <window_info anchor="bottom" id="Version Control" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Run" order="2" weight="0.16929547" />
       <window_info anchor="bottom" id="Terminal" order="7" />
       <window_info anchor="right" id="Remote Host" order="3" visible="true" weight="0.1359375" />
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.106770836" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Inspection Results" weight="0.32912722" />
       <window_info anchor="right" id="Database" order="3" />
+      <window_info anchor="bottom" id="Find" order="1" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.39957938" />
@@ -273,7 +302,6 @@
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
-      <window_info anchor="bottom" id="Find" order="1" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -288,6 +316,51 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/index.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="198">
+          <caret line="9" column="40" selection-start-line="9" selection-start-column="40" selection-end-line="9" selection-end-column="40" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/footer.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="88">
+          <caret line="4" column="14" selection-start-line="4" selection-start-column="14" selection-end-line="4" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/database/database.class.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="572">
+          <caret line="26" column="14" selection-start-line="26" selection-start-column="14" selection-end-line="26" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/header.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="286">
+          <caret line="13" column="74" selection-start-line="13" selection-start-column="74" selection-end-line="13" selection-end-column="74" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/prijavaRegistracija.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1210">
+          <caret line="55" column="5" selection-start-line="55" selection-start-column="5" selection-end-line="55" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/JavaScript/miasimuni.js">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/database/insertNewUser.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="44">
+          <caret line="2" lean-forward="true" selection-start-line="2" selection-end-line="2" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/prijavaRegistracija.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="44">
@@ -436,24 +509,11 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/index.html" />
-    <entry file="file://$PROJECT_DIR$/database/database_connection.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="22">
-          <caret line="1" lean-forward="true" selection-start-line="1" selection-end-line="1" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/database/database_connection.php" />
     <entry file="file://$PROJECT_DIR$/index.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="198">
           <caret line="9" column="40" selection-start-line="9" selection-start-column="40" selection-end-line="9" selection-end-column="40" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/css/miasimuni.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="81" column="8" lean-forward="true" selection-start-line="81" selection-start-column="8" selection-end-line="81" selection-end-column="8" />
         </state>
       </provider>
     </entry>
@@ -466,36 +526,46 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/database/database.class.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
+        <state relative-caret-position="572">
           <caret line="26" column="14" selection-start-line="26" selection-start-column="14" selection-end-line="26" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/css/miasimuni.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="353">
+          <caret line="91" selection-start-line="91" selection-end-line="91" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/templates/header.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="237">
-          <caret line="13" column="74" selection-start-line="13" selection-start-column="74" selection-end-line="13" selection-end-column="74" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/JavaScript/miasimuni.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret lean-forward="true" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/prijavaRegistracija.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1210">
-          <caret line="55" column="5" selection-start-line="55" selection-start-column="5" selection-end-line="55" selection-end-column="5" />
+        <state relative-caret-position="374">
+          <caret line="17" column="7" lean-forward="true" selection-start-line="17" selection-start-column="7" selection-end-line="17" selection-end-column="7" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/database/insertNewUser.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="44">
-          <caret line="2" lean-forward="true" selection-start-line="2" selection-end-line="2" />
+        <state relative-caret-position="506">
+          <caret line="23" lean-forward="true" selection-start-line="23" selection-end-line="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/JavaScript/miasimuni.js">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/prijavaRegistracija.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="295">
+          <caret line="37" column="31" selection-start-line="37" selection-start-column="31" selection-end-line="37" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/JavaScript/jquery.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="176">
+          <caret line="8" column="34" selection-start-line="8" selection-start-column="34" selection-end-line="8" selection-end-column="34" />
         </state>
       </provider>
     </entry>

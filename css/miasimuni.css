@@ -105,3 +105,7 @@ section{
 .footer-row{
     background: lightgray;
 }
+
+.error-input{
+    background: red;
+}

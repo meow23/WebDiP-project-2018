@@ -20,4 +20,4 @@ $insertion->connectDB();
 $insertion->sqlQuery($sql);
 $insertion->closeConnection();
 
-header("Location:https://barka.foi.hr/WebDiP/2017_projekti/WebDiP2017x138/");
+header("Location:https://barka.foi.hr/WebDiP/2017_projekti/WebDiP2017x138/prijavaRegistracija.php");
