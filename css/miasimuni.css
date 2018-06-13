@@ -2,28 +2,56 @@ body{
     margin: 0px;
     font-family: 'IBM Plex Sans', sans-serif;
 
+
 }
 header{
     margin: 0px;
 }
 
-
-.casssiopeia-logo{
-    object-fit: cover;
-    width: 500px;
-    height: 150px;
-    padding: 10px;
-    background-image: url(/images/Cas-logo.png);
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: center;
-    margin: auto;
-    margin-top: 10px;
-}
-
 .title-row{
     padding: 0px;
     border: none;
+}
+
+div.casssiopeia-logo{
+    width: 500px;
+    height: 150px;
+    padding: 10px;
+    background-size: contain;
+    background: url("../images/Cas-logo-small.png") no-repeat center;
+    margin: 10px auto auto;
+
+}
+
+.side-header-link a{
+
+    font-size: 20px;
+    font-weight: 400;
+    color: #000000;
+    text-decoration: none;
+    margin-right: 20px;
+
+}
+
+.side-header-link{
+    display: flex;
+    justify-content: flex-end;
+    width: 100%;
+    align-items: flex-end;
+
+}
+
+.side-header-link a:hover{
+    color: #788599;
+    transition: 0.3s;
+}
+
+.side-header-link a:active{
+    color: #64addd;
+}
+.side-header-link div{
+    border: double;
+    border-color: black;
 }
 
 .navigation-bar{
@@ -49,4 +77,31 @@ nav a:hover {
 
 nav a.active {
     color: #64addd;
+}
+
+section{
+    margin-left: 50px;
+    margin-top: 50px;
+}
+
+.title-section{
+    font-size: 40px;
+    font-weight: 500;
+    width: 300px;
+    float: left;
+
+}
+
+.line{
+    argin-left: 45px;
+    argin-right: 5px;
+    background: black;
+    height: 3px;
+    width: 300px;
+    float: bottom;
+
+}
+
+.footer-row{
+    background: lightgray;
 }

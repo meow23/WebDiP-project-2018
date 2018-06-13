@@ -2,8 +2,8 @@
 <project version="4">
   <component name="WebServers">
     <option name="servers">
-      <webServer id="fa95e686-45a5-4cb8-9e02-d596bd234f3b" name="Barka" url="http://barka.foi.hr/WebDiP/2017/zadaca_05/miasimuni">
-        <fileTransfer host="barka.foi.hr" port="22" rootFolder="/var/www/WebDiP/2017/zadaca_05/miasimuni" accessType="SFTP">
+      <webServer id="fa95e686-45a5-4cb8-9e02-d596bd234f3b" name="Barka" url="http://barka.foi.hr/WebDiP/2017_projekti/WebDiP2017x138/">
+        <fileTransfer host="barka.foi.hr" port="22" rootFolder="/var/www/WebDiP/2017_projekti/WebDiP2017x138/" accessType="SFTP">
           <advancedOptions>
             <advancedOptions dataProtectionLevel="Private" />
           </advancedOptions>
