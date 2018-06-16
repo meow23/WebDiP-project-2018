@@ -51,6 +51,7 @@ class Database{
         return $update_result;
     }
 
+
     function pogreskaDB() {
         if ($this->error != '') {
             return true;

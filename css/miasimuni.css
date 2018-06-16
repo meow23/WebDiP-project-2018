@@ -109,3 +109,7 @@ section{
 .error-input{
     background: red;
 }
+
+.button-hide{
+    display: none;
+}
