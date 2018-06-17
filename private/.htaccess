@@ -1,0 +1,4 @@
+AuthType Basic
+AuthName "Private access area"
+AuthUserFile /var/www/webdip.barka.foi.hr/2017_projekti/WebDiP2017x138/.htpasswd
+Require valid-user

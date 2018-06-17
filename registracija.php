@@ -36,11 +36,13 @@
         <input type="text" id="captcha" disabled/><br/><br/>
         <input type="text" id="inputText"/><br/><br/>
         <button id="generateCap" type="button">Osvježi provjeru</button>
-        <div id="sendReg">
-            <button id="registration-button"  name = "btnRegistration" value="Registracija" type="submit" >Registracija</button>
-        </div>
+        <br>
+        <br>
+        <button id="registration-button"  name = "btnRegistration" value="Registracija" type="submit" >Registracija</button>
+
     </section>
 </form>
+<br><br><br>
 
 <?php
     include ("templates/footer.php");

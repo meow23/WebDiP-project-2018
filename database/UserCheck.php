@@ -15,6 +15,8 @@ if($_GET['idUser'] == "ajaxCheckUsername"){
     else echo "<unavailable>0</unavailable>";
     echo "</users>";
 
+
+
     $check->closeConnection();
 
 }
