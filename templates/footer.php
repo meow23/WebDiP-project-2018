@@ -1,4 +1,3 @@
-</body>
 
 <footer class="footer-row">
     <div>
@@ -10,3 +9,5 @@
     </div>
 
 </footer>
+</body>
+</html>

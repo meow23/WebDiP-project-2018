@@ -26,6 +26,7 @@
     <div id="login-button" class="side-header-link">
         <a href="prijava.php"> Prijava </a>
         <a href="registracija.php"> Registracija </a>
+        <button action='logoutUser.php' id ="logout" class="button-hide" >Logout</button>
     </div>
     <div class="casssiopeia-logo"></div>
 

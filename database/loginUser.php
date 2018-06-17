@@ -16,23 +16,19 @@ if(isset($_POST['usernameLog'])&&isset($_POST['passwordLog'])){
     $logUser ->connectDB();
 
     $result = $logUser->sqlQuery($sql);
-    $result = mysqli_fetch_row($result);
+    $result = mysqli_num_rows($result);
 
-    echo"<user>";
-    if($result!=0){
-        echo "<validUser>1</validUser>";
+    if($result==1){;
         $_SESSION['timeout'] = time()*8400;
         $_SESSION['usernameLog'] = $username;
-
+        $_SESSION['passwordLog'] = $password;
+        header("Location: https://barka.foi.hr/WebDiP/2017_projekti/WebDiP2017x138/proizvodi.php" );
+        echo "<script>$('#logout').removeClass('button-hide')</script>";
     }
     else {
-        echo "<validUser>0</validUser>";
-        //unset($_SESSION['usernameLog']);
-        //unset($_SESSION['passwordLog']);
-        echo("session died!");
+        echo "Invalid username or password!";
     }
 
-    echo "</user>";
 }
 
 

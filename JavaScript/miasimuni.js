@@ -1,18 +1,17 @@
 
 $(window).on('load',function () {
 
-    /*function postaviCookie(cname, cvalue, exdays) {
+    function setCookie(cname, cvalue, exdays) {
         var d = new Date();
         d.setTime(d.getTime() + (exdays * 24 * 60 * 60 * 1000));
-        var expires = "istice=" + d.toUTCString();
+        var expires = "expires="+d.toUTCString();
         document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
-        alert("Ova stranica sprema kolačiće!!");
     }
 
-    function dohvatiCookie(cname) {
+    function getCookie(cname) {
         var name = cname + "=";
         var ca = document.cookie.split(';');
-        for (var i = 0; i < ca.length; i++) {
+        for(var i = 0; i < ca.length; i++) {
             var c = ca[i];
             while (c.charAt(0) == ' ') {
                 c = c.substring(1);
@@ -24,51 +23,16 @@ $(window).on('load',function () {
         return "";
     }
 
-    function provjeriCookie() {
-        var cookie = dohvatiCookie("prvi_dolazak");
-
-        if (cookie == "") {
-
-            postaviCookie("prvi_dolazak", 1, 1);
-
+    function checkCookie() {
+        var user = getCookie($("#user-login").val());
+        if (user != "") {
+            alert("Welcome again " + user);
+        } else {
+            if (user != "" && user != null) {
+                setCookie("username", user, 1);
+            }
         }
-    }*/
+    }
 })
-    //LOGIN CHECK
-    var userCheck;
-    $("#user-login").on('blur', function () {
-        var user = $("#user-login").val();
-        var pass = $("#pass-login").val();
-        if (user != '' && pass != '') {
-            $.ajax({
-                url: 'database/loginUser.php',
-                type: 'GET',
-                data: {
-                    'user-login': user,
-                    'pass-login': pass},
-                dataType: 'xml',
-                success: function (xml) {
-                    $(xml).find('user').each(function () {
-                        userCheck = $(this).find('validUser').text();
-                    });
-                    if (userCheck == 0) {
-                        alert("Korisnicko ime ili lozinka nisu valjani!");
-                        $("#user-login").addClass("error-input");
-                        event.preventDefault();
-
-                    } else {
-                        alert("Prijava uspješna!");
 
 
-
-                    }
-
-                },
-                error: function () {
-
-                }
-            });
-
-
-        }
-    })
