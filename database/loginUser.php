@@ -19,15 +19,20 @@ if(isset($_POST['usernameLog'])&&isset($_POST['passwordLog'])){
     $result = mysqli_num_rows($result);
 
     if($result==1){;
-        $_SESSION['timeout'] = time()*8400;
-        $_SESSION['usernameLog'] = $username;
-        $_SESSION['passwordLog'] = $password;
-        header("Location: https://barka.foi.hr/WebDiP/2017_projekti/WebDiP2017x138/proizvodi.php" );
-        echo "<script>$('#logout').removeClass('button-hide')</script>";
+        if($password == $result['lozinka']){
+            $_SESSION['timeout'] = time()*8400;
+            $_SESSION['usernameLog'] = $username;
+            $_SESSION['userID']=$result['idKorisnik'];
+           // header("Location: https://barka.foi.hr/WebDiP/2017_projekti/WebDiP2017x138/proizvodi.php" );
+            echo "<script>$('#logout').removeClass('button-hide')</script>";
+        }
+
     }
     else {
         echo "Invalid username or password!";
     }
+
+
 
 }
 

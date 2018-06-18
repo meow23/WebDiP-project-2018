@@ -1,6 +1,5 @@
 <?php
 include ("templates/header.php");
-//session_start();
 
 ?>
 <form method="POST" id="forma"  action="database/loginUser.php" enctype="multipart/form-data">
