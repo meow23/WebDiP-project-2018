@@ -20,6 +20,7 @@
 
     <script src="JavaScript/miasimuni.js" type="text/javascript"></script>
     <script src="JavaScript/jquery.js" type="text/javascript"></script>
+    <script src="JavaScript/ajaxDb.js" type="text/javascript"></script>
 
 </head>
 
@@ -27,7 +28,12 @@
     <div id="login-button" class="side-header-link">
         <a href="prijava.php"> Prijava </a>
         <a href="registracija.php"> Registracija </a>
-        <button action='logoutUser.php' id ="logout" class="button-hide" >Logout</button>
+        <?php
+        if(isset($_SESSION['userID'])){
+            echo "<a href='database/logoutUser.php'>Odjava</a>";
+        }
+        ?>
+
     </div>
     <div class="casssiopeia-logo"></div>
 
@@ -36,6 +42,29 @@
 </header>
 <nav class="navigation-bar">
     <a href="proizvodi.php">Proizvodi</a>
-    <a href="oglasi.php">Popis oglasa</a>
-    <a href="noviOglas.php">Naruči oglas</a>
+
+    <?php
+
+
+
+    if (isset($_SESSION['userRole']) && $_SESSION['userRole'] <= 2) {
+        echo'<a href="popisnarudzbi.php">Popis narudžbi</a>';
+    }
+
+    if (isset($_SESSION['userRole']) && $_SESSION['userRole'] <= 2) {
+        echo'<a href="dodajproizvod.php">Dodaj proizvod</a>';
+    }
+
+    if(isset($_SESSION['userRole'])){
+        echo "<a href=\"noviOglas.php\">Naruči oglas</a>
+              <a href=\"galerijaOglasa.php\">Glaerija oglasa</a>";
+    }
+
+    if(isset($_SESSION['userRole'])&&$_SESSION['userRole']==1){
+        echo "<a href=\"adminPanel.php\">Administrator</a>
+              ";
+    }
+
+
+    ?>
 </nav>

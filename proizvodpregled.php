@@ -2,6 +2,7 @@
 
 	include("templates/header.php");
 	include("database/fetchProductData.php");
+    include("database/database.class.php");
 	
 
 	if (!isset($_SESSION['userID'])) {
@@ -16,6 +17,12 @@
 		$_SESSION['seenProducts'] = $arrayList;
 	}
 	$productData = fetchProductData($_GET['id']);
+    $vk = new Database();
+    $vk->connectDB();
+    $logWorkSql = "INSERT INTO dnevnikRada (vrijeme, radnja, Korisnik_idKorisnik) VALUES (NOW(), 'Pregled proizvoda', " . $_SESSION['userID'] . ")";
+    $vk->sqlQuery($logWorkSql);
+    $vk->closeConnection();
+
 
 ?>
 
@@ -73,8 +80,14 @@
 	</form>
 	
 	<br>
-	
-	<h4><a href="povijestproizvoda.php">Povijest pregledanih proizvoda</a></h4>
+	<?php
+
+    if (isset($_SESSION['userRole']) && $_SESSION['userRole'] > 2) {
+        echo('<h4><a href="povijestproizvoda.php">Povijest pregledanih proizvoda</a></h4>');
+    }
+
+    ?>
+
 
 </div>
 

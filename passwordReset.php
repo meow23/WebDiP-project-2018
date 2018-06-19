@@ -23,10 +23,13 @@ if(isset($_POST["resetpass"])&&isset($_POST["resetpassC"])){
     $password_val = $_POST["resetpassC"];
 
     $sql = "UPDATE Korisnik SET lozinka='".$password."', potvrdaLozinke='".$password_val."' WHERE korisnicko_ime='".$username."'";
+    $logSql = "INSERT INTO dnevnikBaze(upit, Korisnik_idKorisnik) VALUES ('" .  $sql . "', " . $_SESSION['userID'] . ")";
+
 
     $reset = new Database();
     $reset ->connectDB();
     $result = $reset->sqlQuery($sql);
+    $reset->sqlQuery($logSql);
     echo "Lozinka promjenjena!";
 
 }

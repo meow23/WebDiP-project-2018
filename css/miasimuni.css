@@ -211,3 +211,25 @@ footer{
 	box-sizing: border-box;
 	padding: 10px;
 }
+figure.galerija {
+    display: inline-block;
+    width: 23%;
+    margin: 0;
+    margin-left: 0.75%;
+    margin-right: 0.75%;
+    height: 180px;
+}
+
+.galerija img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+}
+
+.galerija:hover img{
+    height: 180px;
+}
+
+.galerija:hover figcaption {
+    display: none;
+}

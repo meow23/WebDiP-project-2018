@@ -1,61 +1,60 @@
 <?php
-    include_once ('templates/header.php');
+include_once ('templates/header.php');
 
-    $addError;
-    if(!empty( $addError)){
-        foreach ($addError as $k=>$v){
-            echo "<p>$v</p>";
-        }
+$addError;
+if(!empty( $addError)){
+    foreach ($addError as $k=>$v){
+        echo "<p>$v</p>";
     }
+}
 
 
 ?>
-    <div class="main-body">
+<div class="main-body">
+    <br>
+    <form id="newAdd" method="post" enctype="multipart/form-data">
+        <div class="form-input">
+            <label>Naziv oglasa: </label>
+            <input type="text" id="nameAd" name="nameAd">
+        </div>
+        <br>
+        <div class="form-input">
+            <label>Datum početka: </label>
+            <input type="text" id="startAd" name="startAd">
+        </div>
+
+        <br>
+        <div class="form-input">
+            <label>Vrsta oglasa:</label>
+            <select id ='categoryAd' name='category'>
+                <?php
+                include ("database/categoryAd.php");
+                ?>
+            </select>
+
+        </div>
+        <br>
+        <div class="form-input">
+            <label>Opis oglasa: </label>
+            <input type="text" id="descAd" name="descAd">
+        </div>
+        <br>
+        <div class="form-input">
+            <label>URL: </label>
+            <input type="text" id="addURL" name="addURL">
+        </div>
+        <br>
+        <div class="form-input">
+            <label>Postavi sliku oglasa:</label>
+            <input type="file" name="fileToUpload" id="addImage" >
+        </div>
         <br>
 
-        <form id="newAdd" method="post" enctype="multipart/form-data">
-            <div class="form-input">
-                <label>Naziv oglasa: </label>
-                <input type="text" id="nameAd" name="nameAd">
-            </div>
-            <br>
-            <div class="form-input">
-                <label>Datum početka: </label>
-                <input type="text" id="startAd" name="startAd">
-            </div>
-
-            <br>
-            <div class="form-input">
-                <label>Vrsta oglasa:</label>
-                <select id ='categoryAd' name='category'>
-                    <?php
-                    include ("database/categoryAd.php");
-                    ?>
-                </select>
-
-            </div>
-            <br>
-            <div class="form-input">
-                <label>Opis oglasa: </label>
-                <input type="text" id="descAd" name="descAd">
-            </div>
-            <br>
-            <div class="form-input">
-                <label>URL: </label>
-                <input type="text" id="addURL" name="addURL">
-            </div>
-            <br>
-            <div class="form-input">
-                <label>Postavi sliku oglasa:</label>
-                <input type="file" name="fileToUpload" id="addImage" >
-            </div>
-            <br>
-
-            <button name="addAd" id="addAd" type="submit" value="1" class="button">Pošalji</button>
-            <br>
-            <br>
-        </form>
-    </div>
+        <button name="addAd" id="addAd" type="submit" value="1" class="button">Pošalji</button>
+        <br>
+        <br>
+    </form>
+</div>
 
 <?php
 
@@ -76,9 +75,12 @@ if(isset($_POST['addAd'])){
 
     }
     else{
+
+
+
+
         $checkSql="SELECT trajanjeOglasaSati FROM VrstaOglasa WHERE idVrstaOglasa=".$_POST['category'];
         $logSql = "INSERT INTO dnevnikBaze(upit, Korisnik_idKorisnik) VALUES ('" .  $checkSql . "', " . $_SESSION['userID'] . ")";
-
 
 
         $checkDate=new Database();
@@ -92,6 +94,8 @@ if(isset($_POST['addAd'])){
         $getDesc = $_POST['descAd'];
         $getCate = $_POST['category'];
         $getURL = $_POST['addURL'];
+        $idOglas= $_GET['id'];
+
 
         $getDateEnding = date("Y-m-d H:i:s", strtotime("+$getEndDate hours", strtotime($getDate)));
 
@@ -108,10 +112,10 @@ if(isset($_POST['addAd'])){
         $imageFileType = strtolower(pathinfo($target_file,PATHINFO_EXTENSION));
 
 // Check if file already exists
-        if (file_exists($target_file)) {
+      /*  if (file_exists($target_file)) {
             echo "Sorry, file already exists.";
             $uploadOk = 0;
-        }
+        }*/
 
 // Allow certain file formats
         if($imageFileType != "jpg" && $imageFileType != "png" && $imageFileType != "jpeg"
@@ -126,9 +130,10 @@ if(isset($_POST['addAd'])){
         } else {
             if (move_uploaded_file($_FILES["fileToUpload"]["tmp_name"], $target_file)) {
                 echo "The file ". basename( $_FILES["fileToUpload"]["name"]). " has been uploaded.";
-                $sql = "INSERT INTO Oglasi(naziv, datumPocetka, datumZavrsetka, Korisnik,slika, VrstaOglasa, URLstranice, opis) VALUES ('$getName','$getDate','$getDateEnding',$korisnik,'$getImg',$getCate,'$getURL','$getDesc');";
+                $sql = "UPDATE Oglasi SET naziv='".$getName."', datumPocetka='".$getDate."', datumZavrsetka='".$getDateEnding."', slika='".$getImg."', vrstaOglasa='".$getCate."', URLstranice='".$getURL."', opis='".$getDesc."' WHERE idOglas=$idOglas";
                 $logSql = "INSERT INTO dnevnikBaze(upit, Korisnik_idKorisnik) VALUES ('" .  $sql . "', " . $_SESSION['userID'] . ")";
-                $logWorkSql = "INSERT INTO dnevnikRada (vrijeme, radnja, Korisnik_idKorisnik) VALUES (NOW(), 'Kreiranje oglasa', " . $_SESSION['userID'] . ")";
+                $logWorkSql = "INSERT INTO dnevnikRada (vrijeme, radnja, Korisnik_idKorisnik) VALUES (NOW(), 'Azuriranje oglasa', " . $_SESSION['userID'] . ")";
+
 
                 $checkDate->sqlQuery($sql);
                 $checkDate->sqlQuery($logSql);
@@ -141,6 +146,7 @@ if(isset($_POST['addAd'])){
         }
 
     }
+
 
 
 

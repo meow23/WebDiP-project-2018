@@ -11,6 +11,7 @@
 	<h1>Proizvodi</h1>
 
     <?php
+
     $categoryList = getCategories();
     ?>
 	
@@ -94,10 +95,37 @@
 	<?php
 					$numberOfPages = countAllTableInserts();
 					$numberOfPages = ceil($numberOfPages / 10);
-					for ($i = 1; $i <= $numberOfPages; $i++) {
+					$limit = findLimit();
+					$numberOfPages = ceil($numberOfPages / $limit);
+					if ($numberOfPages > 1) {
+						$page = $_GET['s'] - 1;
+						if($page > 0) {
+							if (isset($_GET["naz"])) echo('<a class="page" href="proizvodi.php?s='.$page.'&kat='.$_GET["kat"].'&naz='.$_GET["naz"].'">Prethodna</a>');
+							else echo('<a class="page" href="proizvodi.php?s='.$page.'&kat='.$_GET["kat"].'">Prethodna</a>');
+						}
+					}
+					if ($numberOfPages > 1) {
+						if (isset($_GET["naz"])) echo('<a class="page" href="proizvodi.php?s=1&kat='.$_GET["kat"].'&naz='.$_GET["naz"].'">1</a>');
+						else echo('<a class="page" href="proizvodi.php?s=1&kat='.$_GET["kat"].'">1</a>');
+					}
+					for ($i = 2; $i <= $numberOfPages; $i++) {
 						$pageNumber = $i;
 						if (isset($_GET["naz"])) echo('<a class="page" href="proizvodi.php?s='.$pageNumber.'&kat='.$_GET["kat"].'&naz='.$_GET["naz"].'">'.$pageNumber.'</a>');
 						else echo('<a class="page" href="proizvodi.php?s='.$pageNumber.'&kat='.$_GET["kat"].'">'.$pageNumber.'</a>');
+					}
+					
+					if ($numberOfPages > 1) {
+						$page = $_GET['s'] + 1;
+						if($page < $numberOfPages) {
+							if (isset($_GET["naz"])) echo('<a class="page" href="proizvodi.php?s='.$page.'&kat='.$_GET["kat"].'&naz='.$_GET["naz"].'">Sljedeća</a>');
+							else echo('<a class="page" href="proizvodi.php?s='.$page.'&kat='.$_GET["kat"].'">Sljedeća</a>');
+						}
+					}
+					if ($numberOfPages > 1) {
+						if($_GET['s'] != $numberOfPages) {
+							if (isset($_GET["naz"])) echo('<a class="page" href="proizvodi.php?s='.$page.'&kat='.$_GET["kat"].'&naz='.$_GET["naz"].'">Zadnja</a>');
+							else echo('<a class="page" href="proizvodi.php?s='.$page.'&kat='.$_GET["kat"].'">Zadnja</a>');
+						}
 					}
 						
 					}

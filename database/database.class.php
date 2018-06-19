@@ -60,5 +60,34 @@ class Database{
         }
     }
 
+    function sqlQueryJson($query)
+    {
+        $output = "";
+        $result = $this->sqlQuery($query);
+        $count = 0;
+
+        if ($result != null) {
+            foreach ($result as $v) {
+                $count++;
+                if ($count > 1) break;
+            }
+            if ($count > 1) {
+                $output .= "[";
+                foreach ($result as $v) {
+                    $output .= json_encode($v) . ",";
+                }
+                $output = substr($output, 0, -1);
+                $output .= "]";
+            } else {
+                foreach ($result as $v) {
+                    $output .= json_encode($v);
+                }
+            }
+        } else {
+            $output = "[]";
+        }
+        return $output;
+    }
+
 
 }
